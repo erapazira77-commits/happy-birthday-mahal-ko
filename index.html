@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mahal Ko ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff3366;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 20px 40px;
+        }
+        h2 {
+            color: #ff6699;
+            font-size: 2em;
+            margin-top: 30px;
+        }
+        .balloon {
+            position: absolute;
+            width: 100px;
+            height: 140px;
+            background-color: #ff99cc;
+            border-radius: 50% 50% 50% 50%;
+            bottom: -150px;
+            animation: float 6s infinite;
+        }
+        .balloon:nth-child(2) {
+            background-color: #ff66b2;
+            left: 150px;
+            animation-duration: 7s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #ff3366;
+            left: 300px;
+            animation-duration: 5s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-150px); }
+            100% { transform: translateY(0); }
+        }
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6699;
+            animation: confettiFall 3s infinite;
+        }
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(500px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Maligayang Kaarawan, Mahal! 🥳🥳🥳🥳💓</h1>
+    <p>Sana mabuhay ka nang matagal para magsama tayo, magpakasal tayo 💐 at magkaroon ng mga anak. 😈</p>
+    <p>Pasensya na kung hindi maganda ang aking pagsasalin. 🙃</p>
+    <p>Pasensya na rin kung hindi kita mabibigyan ng regalo. Ang maibibigay ko lang ay ang taos-pusong pagbati ko.</p>
+    <p>Mahal na mahal kita, mahal na mahal kita, mahal na mahal na mahal na mahalllll kitaaaa! 💓💓</p>
+    <h2>At ang pagmamahal na iyon ay hindi kailanman mawawala!!! ❤️</h2>
+    <!-- Balon -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <!-- Confetti -->
+    <script>
+        // Membuat confetti secara acak
+        for (let i = 0; i < 50; i++) {
+            let confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confetti.style.top = Math.random() * -100 + 'px';
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+  </html>
